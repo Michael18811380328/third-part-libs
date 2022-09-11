@@ -1,0 +1,160 @@
+// 整体布局样式
+.app-header {
+  display: flex;
+  padding: 0 20px 0 0;
+  color: #333;
+  background: #fff;
+  .app-header-nav {
+    flex-wrap: wrap;
+  }
+  .app-helper-menu {
+    margin-left: auto;
+    display: flex;
+    .app-name {
+      margin-left: 10px;
+    }
+  }
+  .header-dropdown-wrap {
+    margin-left: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.app-sider {
+  .app-logo {
+    background: @bg;
+    height: 64px;
+    line-height: 64px;
+    overflow: hidden;
+    text-align: center;
+    .app-logo-img {
+      width: 40px;
+    }
+    h1 {
+      display: inline-block;
+      color: #fff;
+      font-style: 18px;
+      text-align: center;
+      font-weight: normal;
+    }
+  }
+  .app-logo-on {
+    overflow: hidden;
+    text-align: center;
+    .logo-wrap {
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      margin-left: 20px;
+    }
+  }
+}
+
+.app-content {
+  padding: 20px;
+  position: relative;
+}
+
+.app-overlay-menu {
+  width: 120px;
+}
+
+.github-corner {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  z-index: 9;
+  cursor: pointer;
+}
+
+// TagsView
+.app-tagsview {
+  white-space: normal;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  border-bottom: 1px solid #d8dce5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 0 3px 0 rgba(0, 0, 0, 0.04);
+  background: #fff;
+  .tags-wrap {
+    & > li {
+      display: inline-block;
+      &:first-of-type {
+        margin-left: 15px;
+        .ant-tag {
+          bottom: 0;
+        }
+      }
+      &:last-of-type {
+        margin-right: 15px;
+      }
+      &.tag-home {
+        .ant-tag {
+          padding: 0 13px;
+        }
+      }
+    }
+    .ant-tag {
+      line-height: 35px;
+      margin-right: 0;
+      border: 0;
+      border-left: 1px solid #f6f6f6;
+      border-radius: 0;
+      padding: 0 8px;
+      cursor: pointer;
+      .anticon-close {
+        padding-left: 3px;
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+    .tag-active {
+      .ant-tag {
+        background-color: #42b983;
+        color: #fff;
+        border-color: #42b983;
+        .anticon-close {
+          color: #fff;
+          &:hover {
+            color: rgb(247, 210, 2);
+          }
+        }
+      }
+    }
+  }
+  .contextmenu {
+    margin: 0;
+    background: #fff;
+    z-index: 3000;
+    position: absolute;
+    list-style-type: none;
+    padding: 5px 0;
+    border-radius: 4px;
+    font-style: 12px;
+    font-weight: 400;
+    color: #333;
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+    li {
+      margin: 0;
+      padding: 0 16px;
+      height: 30px;
+      cursor: pointer;
+      &:hover {
+        background: #eee;
+      }
+    }
+  }
+}
+
+.scrollbar-container {
+  overflow-y: hidden !important;
+}
+
+.scrollbar-track-vertical {
+  visibility: hidden !important;
+}

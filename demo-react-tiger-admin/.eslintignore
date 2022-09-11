@@ -1,0 +1,13 @@
+src/registerServiceWorker.js
+src/**/test/**
+craco.config.js
+postcss.config.js
+/build
+/config
+src/serviceWorker.js
+/test.jsx
+react-app-env.d.ts
+/src/typings/*
+!.eslintrc.js
+echarts-dark-theme.*
+/public
