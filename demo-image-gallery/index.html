@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Image gallery</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- 将画廊项目添加到此列表 -->
+    <ul class="gallery js-gallery"></ul>
+
+    <!-- 全尺寸图像的模态窗口,为了打开，您需要将 is-open CSS 类添加到 div.lightbox -->
+    <div class="lightbox js-lightbox">
+      <div class="lightbox__overlay"></div>
+      <div class="lightbox__content">
+        <img class="lightbox__image" src="" alt="" />
+      </div>
+      <button
+        type="button"
+        class="lightbox__button"
+        data-action="close-lightbox"
+      ></button>
+    </div>
+    <!-- <script src="app.js" type="module"></script> -->
+    <script src="./app.js" type="text/javascript" charset="utf-8" async defer></script>
+  </body>
+</html>
