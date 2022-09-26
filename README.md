@@ -107,7 +107,11 @@ https://pinia.web3doc.top/getting-started.html#%E5%AE%89%E8%A3%85
 
 qs
 
-Vconsole
+### Vconsole
+
+移动端真机开发调试工具， 腾讯官方出品，在微信小程序中嵌入了这个开发工具。实际可以使用这个工具进行调试（打印日志，或者查看 dom 节点，网络请求等）
+
+中文文档：https://github.com/Tencent/vConsole/blob/HEAD/README_CN.md
 
 qrcode
 
