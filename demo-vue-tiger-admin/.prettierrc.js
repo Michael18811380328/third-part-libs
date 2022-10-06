@@ -1,0 +1,13 @@
+module.exports = {
+  "printWidth": 800,
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "alwaysParens": "avoid",
+  "Parser": "babylon",
+  quoteProps: 'consistent',
+  endOfLine: 'lf',
+  htmlWhitespaceSensitivity: 'strict',
+  proseWrap: 'always'
+}

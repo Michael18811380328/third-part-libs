@@ -1,0 +1,87 @@
+// 所有页面主样式
+body{
+  background:#fff;
+}
+/* 过渡动画 */
+.fade-transform-leave-active,
+.fade-transform-enter-active{
+  transition:all .4s;
+}
+.fade-transform-enter-from{
+  opacity:0;
+  transform:translateX(30px);
+}
+.zoom-in-top-enter-active,
+.zoom-in-top-leave-active{
+  transform-origin:center -1px;
+}
+/* 渐变位移 */
+.fade-slide-enter-active, .fade-slide-leave-active{
+  transition:all .5s;
+  transform:translate3d(0, 0, 0);
+  -webkit-transform:translate3d(0, 0, 0);
+}
+.fade-slide-enter, .fade-slide-leave-active{
+  opacity:0;
+  transform:translate3d(20px, 0, 0);
+  -webkit-transform:translate3d(20px, 0, 0);
+}
+/*位移动画*/
+.slide-enter-active, .slide-leave-active{
+  transition:all .8s;
+}
+.slide-enter, .slide-leave-active{
+  opacity:0;
+  transform:translate3d(0, 20px, 0);
+  -webkit-transform:translate3d(0, 20px, 0);
+}
+/* 渐变 */
+.fade-enter-active, .fade-leave-active{
+  transition:opacity .5s;
+}
+.fade-enter, .fade-leave-active{
+  opacity:0;
+}
+/* 列表位移动画 */
+.list-complete-enter-actice{
+  opacity:0;
+  transform:translateY(0px);
+}
+.list-complete-enter, .list-complete-leave-active{
+  opacity:0;
+  transform:translateY(30px);
+}
+.list-complete-leave-active{
+  position:absolute;
+}
+/* 列表位移动画 */
+.list-enter-active, .list-leave-active{
+  transition:all .6s;
+}
+.list-enter, .list-leave-active{
+  opacity:0;
+  transform:translateY(20px);
+}
+.app-error{
+  text-align:center;
+  min-height:calc(100vh - 180px);
+}
+.app-card-header{
+  margin-bottom:15px;
+}
+.app-table-action{
+  padding-bottom:20px;
+  display:flex;
+  justify-content:space-between;
+}
+.app-table-page{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 0 0;
+  line-height:50px;
+}
+.app-table-container{
+  min-height:calc(100vh - 280px);
+  padding-bottom:0;
+}
+

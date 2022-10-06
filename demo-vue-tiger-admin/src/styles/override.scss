@@ -1,0 +1,38 @@
+// 覆盖ui lib样式
+.arco-dropdown{
+  .arco-dropdown-option{
+    height:36px;
+  }
+}
+.arco-divider-horizontal{
+  margin:4px 0;
+}
+.arco-trigger-popup{
+  .arco-trigger-content{
+    .arco-icon{
+      margin-right:5px;
+    }
+  }
+}
+.arco-menu{
+  .arco-menu-inline-header{
+    .arco-icon{
+      margin-right:12px;
+    }
+  }
+  .arco-menu-item{
+    .arco-icon{
+      font-size:16px;
+      margin-right:12px;
+      vertical-align:-3px;
+    }
+    .app-menu-item-inner-title{
+      .arco-icon{
+        margin-right:6px;
+      }
+    }
+  }
+}
+.arco-card-bordered{
+  border:0;
+}

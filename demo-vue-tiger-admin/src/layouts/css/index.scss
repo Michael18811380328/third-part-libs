@@ -1,0 +1,90 @@
+.app-layout{
+  background-color:var(--color-bg-3);
+  .arco-layout-content{
+    display:flex;
+    flex-direction:column;
+    color:var(--color-neutral-9);
+    font-size:16px;
+  }
+}
+.app-layout-content{
+  padding:20px;
+  position:relative;
+  overflow:hidden;
+  background-color:var(--color-border-1);
+}
+.app-root-sider{
+  width:100px;
+  background-color:var(--color-menu-dark-bg);
+  .arco-menu-inner{
+    padding:0;
+  }
+  .arco-menu-item{
+    padding:0 5px 0 16px;
+  }
+  .arco-menu{
+    .arco-icon{
+      margin-right:6px;
+    }
+  }
+}
+.app-header{
+  display:flex;
+  padding:0 20px 0 0;
+  color:var(--color-text-2);
+  background:var(--color-menu-light-bg);
+  height:58px;
+  line-height:58px;
+  .app-header-nav{
+    flex-wrap:wrap;
+  }
+  .app-helper-menu{
+    margin-left:auto;
+    display:flex;
+    .app-name{
+      margin-left:10px;
+    }
+  }
+  .header-dropdown-wrap{
+    display:flex;
+    li{
+      display:flex;
+      align-items:center;
+      padding:0 10px;
+    }
+    &:hover{
+      cursor:pointer;
+    }
+  }
+  .app-header-avatar{
+    width:32px;
+    vertical-align:middle;
+    border-radius:32px;
+  }
+}
+.app-overlay-menu{
+  width:120px;
+  .arco-link{
+    padding:0;
+    color:var(--color-neutral-9);
+  }
+  .arco-dropdown-option{
+    padding:0 16px;
+  }
+}
+.arco-menu-dark .arco-menu-item.arco-menu-selected{
+  background-color:#000 !important;
+  &::before{
+    position:absolute;
+    right:0;
+    width:0;
+    height:0;
+    top:14px;
+    overflow:hidden;
+    content:' ';
+    border-color:transparent var(--color-text-3) transparent transparent;
+    border-style:solid dashed dashed;
+    border-width:6px;
+    z-index:666;
+  }
+}
