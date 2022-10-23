@@ -1,0 +1,25 @@
+// less 类名前缀
+.@{prefixClass} {
+  &-input {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    padding: 4px 7px;
+    height: 28px;
+    cursor: text; // 鼠标文本
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
+    background-color: #fff;
+    background-image: none; // 背景图片空
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    // 渐变效果 cubic-bezier 渐变函数是贝塞尔曲线（四个参数，第一个是开始，第四个是结束，中间两个是变化量-贝塞尔曲线的切线）
+    transition: border 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    &[disabled] {
+      color: #ccc;
+      background: #f7f7f7;
+      cursor: not-allowed;
+    }
+  }
+}
