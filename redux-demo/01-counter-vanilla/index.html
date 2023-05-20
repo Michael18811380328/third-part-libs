@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redux basic example</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <p>
+        Clicked: <span id="value">0</span> times
+        <button id="increment">+</button>
+        <button id="decrement">-</button>
+        <button id="incrementIfOdd">Increment if odd</button>
+        <button id="incrementAsync">Increment async</button>
+      </p>
+    </div>
+    <script>
+
+      // 计数函数（原始状态 state 和 action 然后计算出新的 state 并返回）
+      function counter(state, action) {
+        // 默认返回0——界面初始值
+        if (typeof state === 'undefined') {
+          return 0
+        }
+
+        switch (action.type) {
+          case 'INCREMENT':
+            return state + 1
+          case 'DECREMENT':
+            return state - 1
+          default:
+            return state
+        }
+      }
+
+      // Redux 创建存储（使用上面的 counter 函数）
+      var store = Redux.createStore(counter)
+
+      // 获取数据显示的 DOM
+      var valueEl = document.getElementById('value')
+
+      // 渲染函数（把 store 中的值，渲染到展示的 DOM 中）
+      function render() {
+        valueEl.innerHTML = store.getState().toString()
+      }
+
+      // 界面初始化，渲染一次初始数据
+      render()
+
+      // 存储层订阅渲染函数（存储改变后，触发重新渲染）
+      store.subscribe(render)
+
+      // 按钮绑定对象，然后 store 触发 action
+      document.getElementById('increment')
+        .addEventListener('click', function () {
+          store.dispatch({ type: 'INCREMENT' })
+        })
+
+      document.getElementById('decrement')
+        .addEventListener('click', function () {
+          store.dispatch({ type: 'DECREMENT' })
+        })
+
+      document.getElementById('incrementIfOdd')
+        .addEventListener('click', function () {
+          if (store.getState() % 2 !== 0) {
+            store.dispatch({ type: 'INCREMENT' })
+          }
+        })
+
+      document.getElementById('incrementAsync')
+        .addEventListener('click', function () {
+          setTimeout(function () {
+            store.dispatch({ type: 'INCREMENT' })
+          }, 1000)
+        })
+    </script>
+  </body>
+</html>

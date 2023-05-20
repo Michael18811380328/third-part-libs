@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redux basic example</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <p>
+        Clicked: <span id="value">0</span> times
+        <button id="increment">+</button>
+        <button id="decrement">-</button>
+        <button id="incrementIfOdd">Increment if odd</button>
+        <button id="incrementAsync">Increment async</button>
+      </p>
+    </div>
+    <script>
+      var add = 'ADDITION';
+      var dec = 'DECLINE';
+      // 创建 action counter 函数（将 state 和 action 重新计算成新的 State）
+      function counter(preState, action) {
+        if (typeof preState === 'undefined') {
+          return 0;
+        }
+        // BUR action.type
+        switch (action.type) {
+          case add:
+            return preState + 1;
+          case dec:
+            return preState - 1;
+          default:
+            return preState;
+        }
+      }
+      // store 生成，绑定上面的函数
+      var store = Redux.createStore(counter);
+      // 获取valueDOM
+      var valueDOM = document.getElementById('value');
+      // 创建渲染函数（使用 redux 的值渲染 DOM）
+      function render() {
+        // ERROR: Redux.getStore().toString();
+        valueDOM.innerHTML = store.getState().toString();
+      }
+      // 渲染函数首次执行
+      render();
+      // store 订阅渲染函数
+      // ERROR store.dispatch(render);
+      store.subscribe(render);
+
+      // 不同的按钮点击，执行对应的 action
+      document.getElementById('increment').addEventListener('click', function() {
+        // ERROR store.dispatch(add);
+        store.dispatch({ type: add });
+      })
+      document.getElementById('decrement').addEventListener('click', function() {
+        store.dispatch({ type: dec });
+      })
+    </script>
+  </body>
+</html>

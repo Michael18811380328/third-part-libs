@@ -6,6 +6,50 @@
 
 https://michael18811380328.github.io/frontend/site/third-part-lib/000-dir/
 
+
+
+### Compress-image
+
+前端使用 canvas 压缩图片案例
+
+
+
+### localForage
+
+前端本地存储（离线模式，存储类型多，比 localStorage 更强大，封装 WebSQL 实现）
+
+
+
+### nextJS
+
+React 推荐的框架。React 是一个展示数据的库，nextJS 整合了 react，是很好的前端框架。
+
+
+
+### match-sorter
+
+前端排序库
+
+
+
+### sort-by 
+
+前端排序库
+
+
+
+### webRTC
+
+webRTC是浏览器调用摄像头的功能，主要应用：手机端调用摄像头扫描二维码（依赖第三方库ZXing）；在线视频会议等（文件流）。
+
+
+
+### chatGPT
+
+未来发展方向，人工智能（NLP）进行知识问答，图片绘制等。
+
+
+
 ### Arco
 
 3.3K
