@@ -16,7 +16,7 @@
     "@kangc/v-md-editor": "^2.3.14",
     "@vueuse/core": "^7.7.0",
     "animate.css": "^4.1.1",
-    "axios": "^0.26.0",
+    "axios": "^1.6.0",
     "codemirror-editor-vue3": "^2.0.2",
     "dayjs": "^1.10.7",
     "echarts": "^5.3.0",
