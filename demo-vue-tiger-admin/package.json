@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@arco-design/web-vue": "^2.17.0",
-    "@kangc/v-md-editor": "^2.3.14",
+    "@kangc/v-md-editor": "^2.3.18",
     "@vueuse/core": "^7.7.0",
     "animate.css": "^4.1.1",
     "axios": "^1.6.0",
