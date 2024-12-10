@@ -80,7 +80,7 @@ https://vitejs.cn/guide/
 
 星星 10K
 
-传统 Raect Hook 的使用场景有限，使用不便，所以阿里增加了这个 hooks
+传统 React Hook 的使用场景有限，使用不便，所以阿里增加了这个 hooks
 
 A high-quality & reliable React Hooks library
 
